@@ -1,0 +1,62 @@
+<swiper class="swiper_box"  indicator-dots="{{ indicatorDots }}" autoplay="{{ true }}" current="{{ current }}" interval="{{ interval }}" duration="{{ duration }}" circular="{{ circular }}" bindchange="swiperchange">
+    <block wx:for="{{images}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="section">
+  <view class="flex-wrp" >
+    <view class="flex-item item_first">
+      <image  class="item_image" mode="aspectFill" src="http://zxpic.gtimg.com/infonew/0/wechat_pics_-214359.jpg/168"></image>
+    </view>
+    <view class="flex-item item_second">
+    <text class="text_first">轻松二刻 | 真的要被这些小屁孩蠢哭了！哈哈哈哈</text>
+    <text class="text_second">来源：卡娃微卡</text>
+    </view>
+  </view>
+</view>
+<view class="section">
+  <view class="flex-wrp" >
+    <view class="flex-item item_first">
+      <image  class="item_image" mode="aspectFill" src="http://zxpic.gtimg.com/infonew/0/wechat_pics_-214359.jpg/168"></image>
+    </view>
+    <view class="flex-item item_second">
+    <text class="text_first">轻松二刻 | 真的要被这些小屁孩蠢哭了！哈哈哈哈</text>
+    <text class="text_second">来源：卡娃微卡</text>
+    </view>
+  </view>
+</view>
+<view class="section">
+  <view class="flex-wrp" >
+    <view class="flex-item item_first">
+      <image  class="item_image" mode="aspectFill" src="http://zxpic.gtimg.com/infonew/0/wechat_pics_-214359.jpg/168"></image>
+    </view>
+    <view class="flex-item item_second">
+    <text class="text_first">轻松二刻 | 真的要被这些小屁孩蠢哭了！哈哈哈哈</text>
+    <text class="text_second">来源：卡娃微卡</text>
+    </view>
+  </view>
+</view>
+<view class="section">
+  <view class="flex-wrp" >
+    <view class="flex-item item_first">
+      <image  class="item_image" mode="aspectFill" src="http://zxpic.gtimg.com/infonew/0/wechat_pics_-214359.jpg/168"></image>
+    </view>
+    <view class="flex-item item_second">
+    <text class="text_first">轻松二刻 | 真的要被这些小屁孩蠢哭了！哈哈哈哈</text>
+    <text class="text_second">来源：卡娃微卡</text>
+    </view>
+  </view>
+</view>
+<view class="section">
+  <view class="flex-wrp" >
+    <view class="flex-item item_first">
+      <image  class="item_image" mode="aspectFill" src="http://zxpic.gtimg.com/infonew/0/wechat_pics_-214359.jpg/168"></image>
+    </view>
+    <view class="flex-item item_second">
+    <text class="text_first">轻松二刻 | 真的要被这些小屁孩蠢哭了！哈哈哈哈</text>
+    <text class="text_second">来源：卡娃微卡</text>
+    </view>
+  </view>
+</view>

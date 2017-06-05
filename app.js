@@ -25,6 +25,6 @@ App({
     }
   },
   globalData:{
-    userInfo:null
+    juheKey: 'f16af393a63364b729fd81ed9fdd4b7d',
   }
 })

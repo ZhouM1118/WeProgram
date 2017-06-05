@@ -1,62 +1,31 @@
-<swiper class="swiper_box"  indicator-dots="{{ indicatorDots }}" autoplay="{{ true }}" current="{{ current }}" interval="{{ interval }}" duration="{{ duration }}" circular="{{ circular }}" bindchange="swiperchange">
+ <loading hidden="{{hidden}}" >
+    加载中...
+  </loading>
+<scroll-view scroll-y="true" style="height: 600px;" bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+<view wx:if="{{hasRefesh}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+      <icon type="waiting" size="35"/><text class="toast">刷新中...</text></view>
+<swiper class="swiper_box"  indicator-dots="{{ indicatorDots }}" autoplay="{{ false }}" current="{{ current }}" interval="{{ interval }}" duration="{{ duration }}" circular="{{ circular }}" bindchange="swiperchange">
     <block wx:for="{{images}}">
     <swiper-item>
       <image src="{{item}}" class="slide-image"/>
     </swiper-item>
   </block>
 </swiper>
-<view class="section">
+<view class="section" wx:for="{{list}}" wx:for-item="item">
+  <navigator url="../../{{item.url}}">
   <view class="flex-wrp" >
     <view class="flex-item item_first">
-      <image  class="item_image" mode="aspectFill" src="http://zxpic.gtimg.com/infonew/0/wechat_pics_-214359.jpg/168"></image>
+      <image  class="item_image" mode="aspectFill" src="{{item.firstImg}}"></image>
     </view>
     <view class="flex-item item_second">
-    <text class="text_first">轻松二刻 | 真的要被这些小屁孩蠢哭了！哈哈哈哈</text>
-    <text class="text_second">来源：卡娃微卡</text>
+    <text class="text_first">{{item.title}}</text>
+    <text class="text_second">来源：{{item.source}}</text>
     </view>
   </view>
+  </navigator>
 </view>
-<view class="section">
-  <view class="flex-wrp" >
-    <view class="flex-item item_first">
-      <image  class="item_image" mode="aspectFill" src="http://zxpic.gtimg.com/infonew/0/wechat_pics_-214359.jpg/168"></image>
+<view class="tips1">
+      <view wx:if="{{hasMore}}"  style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+      <icon type="waiting" size="35"/><text class="toast">玩命的加载中...</text></view>
     </view>
-    <view class="flex-item item_second">
-    <text class="text_first">轻松二刻 | 真的要被这些小屁孩蠢哭了！哈哈哈哈</text>
-    <text class="text_second">来源：卡娃微卡</text>
-    </view>
-  </view>
-</view>
-<view class="section">
-  <view class="flex-wrp" >
-    <view class="flex-item item_first">
-      <image  class="item_image" mode="aspectFill" src="http://zxpic.gtimg.com/infonew/0/wechat_pics_-214359.jpg/168"></image>
-    </view>
-    <view class="flex-item item_second">
-    <text class="text_first">轻松二刻 | 真的要被这些小屁孩蠢哭了！哈哈哈哈</text>
-    <text class="text_second">来源：卡娃微卡</text>
-    </view>
-  </view>
-</view>
-<view class="section">
-  <view class="flex-wrp" >
-    <view class="flex-item item_first">
-      <image  class="item_image" mode="aspectFill" src="http://zxpic.gtimg.com/infonew/0/wechat_pics_-214359.jpg/168"></image>
-    </view>
-    <view class="flex-item item_second">
-    <text class="text_first">轻松二刻 | 真的要被这些小屁孩蠢哭了！哈哈哈哈</text>
-    <text class="text_second">来源：卡娃微卡</text>
-    </view>
-  </view>
-</view>
-<view class="section">
-  <view class="flex-wrp" >
-    <view class="flex-item item_first">
-      <image  class="item_image" mode="aspectFill" src="http://zxpic.gtimg.com/infonew/0/wechat_pics_-214359.jpg/168"></image>
-    </view>
-    <view class="flex-item item_second">
-    <text class="text_first">轻松二刻 | 真的要被这些小屁孩蠢哭了！哈哈哈哈</text>
-    <text class="text_second">来源：卡娃微卡</text>
-    </view>
-  </view>
-</view>
+</scroll-view>
